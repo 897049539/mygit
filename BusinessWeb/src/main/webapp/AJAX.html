@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="ready()">
+<div  id="x" ></div>
+
+</body>
+    <script src="static/jquery-3.3.1.min.js"></script>
+    <script>
+        /*function ready() {
+            //ajax请求
+           var xmlhttp;
+            if(window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            }else{
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","http://localhost:8080/BusinessWeb/user?username=admin&password=123456",true);
+
+            xmlhttp.send();
+
+
+
+        }*/
+        $(function () {
+           $.ajax({
+              url: "http://localhost:8080/BusinessWeb/user",
+              type:"get",
+              async:true,
+              data:{"username":"admin","password":"123456"},
+               success:function (data) {
+                   alert(data);
+               }
+           });
+        });
+
+
+    </script>
+
+</html>

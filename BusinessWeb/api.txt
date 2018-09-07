@@ -1,0 +1,5 @@
+1.后台登录接口
+
+dao层：jdbc
+    接口+实现类
+    jdbc：1.加载驱动 2.获取连接 3prepareStatement 4.执行sql 5、处理结果集 5.关闭连接
